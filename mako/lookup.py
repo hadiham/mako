@@ -291,7 +291,7 @@ class TemplateLookup(TemplateCollection):
         filename = posixpath.normpath(filename)
         for dir_ in self.directories:
             if filename[0 : len(dir_)] == dir_:
-                return filename[len(dir_) :]
+                return filename[len(dir_) + 1 :]
         else:
             return None
 

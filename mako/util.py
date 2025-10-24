@@ -151,7 +151,6 @@ class FastEncodingBuffer:
 
     def truncate(self):
         self.data = collections.deque()
-        self.write = self.data.append
 
     def getvalue(self):
         if self.encoding:
